@@ -1,0 +1,70 @@
+@font-face {
+    font-family: western;
+    src: url(./resources/RewardPersonalUseRegular-qZAl5.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --header: rgb(240, 176, 92);
+    --body: rgb(248, 199, 135);
+    --footer: rgb(119, 68, 0);
+
+}
+
+body, html {
+    overflow: hidden;
+    position: relative;
+}
+/* Header */
+
+.header {
+    display: flex;
+    width: 100vw;
+    height: 10vh;
+    background-color: var(--header);
+    align-items: center;
+    justify-content: center;
+}
+
+.mainTitle {
+    font-size: 6rem;
+    font-family: western, monospace;
+}
+
+/* Body */
+
+    .body {
+        width: 100vw;
+        height: 85vh;
+    }
+
+/* Footer */
+
+.footer {
+    width: 100vw;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--footer);
+    gap: 1.5rem;
+}
+
+.name {
+    font-family: western, monospace;
+    font-size: 3rem;
+}
+
+.gitLogo {
+    margin-top: 1vh;
+    height: 2rem;
+    transition: 0.5s ease-in-out;
+}
+
+.gitLogo:hover {
+    transform: rotate(360deg) scale(1.1);
+}
