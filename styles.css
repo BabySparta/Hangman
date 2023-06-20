@@ -42,6 +42,16 @@ body, html {
         height: 85vh;
     }
 
+    .wrongGuesses {
+        height: 10vh;
+        background-color: pink;
+    }
+
+    .wrongGuess {
+        font-family: western, monospace;
+        font-size: 3rem;
+    }
+
 /* Footer */
 
 .footer {
