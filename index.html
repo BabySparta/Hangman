@@ -11,7 +11,28 @@
     <div class="header">
         <div class="mainTitle">Western Hangman</div>
     </div>
-    <div class="body"></div>
+    <div class="body">
+            <div class="bodyWrapper">
+                <img src="" alt="hangman stage 0" class="stageImg">
+                <div class="guesses">
+                </div>
+            </div>
+            <div class="lowerBodyWrapper">
+                <div class="hiddenWord">
+                    <div class="hiddenLetter">_</div>
+                    <div class="hiddenLetter">_</div>
+                    <div class="hiddenLetter">_</div>
+                    <div class="hiddenLetter">_</div>
+                    <div class="hiddenLetter">_</div>
+                    <div class="hiddenLetter">_</div>
+                    <div class="hiddenLetter">_</div>
+                </div>
+                <div class="guessWrap">
+                    <div class="guessTitle">Guess:</div>
+                    <input type="text" class="guessField" maxlength="1" minlength="1" pattern="[A-Za-z]" oninput="this.value = this.value.replace(/[^A-Za-z]/, '')">
+                </div>
+            </div>
+    </div>
     <div class="footer">
         <div class="name">By: Brandon Young</div>
         <a href = "https://github.com/BabySparta/Hangman"><img src="./resources/github-mark.png" alt="github" class="gitLogo"></a>
