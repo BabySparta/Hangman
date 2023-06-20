@@ -34,11 +34,13 @@ guessField.addEventListener("keyup", (event) => {
     if (checkLetter(guess)) {
         makeGuess(guess);
         guessField.value = "";
+        checkEndGame();
     } else {
         let wrongGuess = document.getElementById("" + (7 - livesRemaining));  
         wrongGuess.innerText = guess;
         guessField.value = "";
         livesRemaining--;
+        checkEndGame();
     }
     
   }
@@ -54,4 +56,29 @@ const checkLetter = (letter) => {
 const makeGuess = (letter) => {
     let i = word.indexOf(letter)
     guesses[i] = letter;
+}
+
+// End Game
+
+const endModal = document.querySelector(".endModal");
+const endTxt = document.querySelector(".whoWon");
+
+const checkEndGame = () => {
+  if (livesRemaining === 0) {
+    endModal.style.display = "flex";
+    endTxt.innerText = "You Died! Better luck next time.";
+  }
+  if (wordGuessed()) {
+    endModal.style.display = "flex";
+    endTxt.innerText = "You Survived! You get a second chance at life.";
+  }
+}
+
+const wordGuessed = () => {
+  for (let i = 0; i < guesses.length; i++) {
+    if (guesses[i] === undefined) {
+      return false;
+    }
+  }
+  return true;
 }
