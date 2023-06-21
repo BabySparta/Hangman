@@ -11,6 +11,7 @@
 :root {
     --header: rgb(240, 176, 92);
     --body: rgb(248, 199, 135);
+    --lowerBody: rgb(136, 96, 43);
     --footer: rgb(119, 68, 0);
 
 }
@@ -32,7 +33,7 @@ body, html {
 
 .mainTitle {
     font-size: 6rem;
-    font-family: western, monospace;
+    font-family: western, sans-serif;
 }
 
 /* Body */
@@ -42,14 +43,93 @@ body, html {
         height: 85vh;
     }
 
+    .bodyWrapper {
+        height: 65vh;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: var(--body);
+    }
+
+    /* Top Body */
+
+    .stageImg {
+        width: 40%;
+        
+    }
+
     .wrongGuesses {
-        height: 10vh;
-        background-color: pink;
+        width: 25%;
+        height: 70%;
+        display: flex;
+        flex-direction: column; 
+    }
+
+    .wrongGuessTitle {
+        font-family: western, sans-serif;
+        font-size: 3rem;
+        text-decoration: underline;
+        margin: 0.5rem; 
+    }
+
+    .wrongGuessWrap {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin: 0.5rem;
     }
 
     .wrongGuess {
-        font-family: western, monospace;
+        height: 5rem;
+        width: 5rem;
+        text-align: center;
+        font-family: western, sans-serif;
+        font-size: 5rem;
+    }
+
+    /* Bottom Body */
+
+    .lowerBodyWrapper {
+        height: 20vh;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: var(--lowerBody);
+    }
+
+    .hiddenWord {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+    
+    .hiddenLetter {
+        font-size: 5rem;
+        font-family: western, sans-serif;
+    }
+
+    .guessWrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .guessTitle {
         font-size: 3rem;
+        font-family: western, sans-serif;
+    }
+
+    .guessField {
+        background: transparent;
+        border: none;
+        border-bottom: 4px solid black;
+        outline: none;
+        width: 5rem;
+        text-align: center;
+        font-size: 5rem;
+        font-family: western, sans-serif;
     }
 
 /* Footer */
@@ -65,7 +145,7 @@ body, html {
 }
 
 .name {
-    font-family: western, monospace;
+    font-family: western, sans-serif;
     font-size: 3rem;
 }
 
@@ -95,7 +175,7 @@ body, html {
 
 .endContent {
     height: 50%;
-    width: 40%;
+    width: 60%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -103,7 +183,7 @@ body, html {
 }
 
 .whoWon, .playAgain {
-    font-size: 3rem;
+    font-size: 5rem;
     font-family: western, sans-serif;
     text-align: center;
     text-shadow: -1px 1px 0 gray,
