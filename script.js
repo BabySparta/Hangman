@@ -101,7 +101,7 @@ const endTxt = document.querySelector(".whoWon");
 const checkEndGame = () => {
   if (livesRemaining === 0) {
     endModal.style.display = "flex";
-    endTxt.innerText = "You Died! Better luck next time.";
+    endTxt.innerText = "You Died! Better luck next time. The word was " + word + ".";
   }
   if (wordGuessed()) {
     endModal.style.display = "flex";
